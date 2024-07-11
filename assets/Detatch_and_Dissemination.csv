@@ -1,0 +1,83 @@
+Hallmark,Signature,GO_id
+Motility and Invasion,GO:0007155 cell adhesion,GO:0033627 cell adhesion mediated by integrin
+Motility and Invasion,GO:0007155 cell adhesion,GO:0098631 cell adhesion mediator activity
+Motility and Invasion,GO:0007155 cell adhesion,GO:0140039 cell-cell adhesion in response to extracellular stimulus
+Motility and Invasion,GO:0007155 cell adhesion,GO:0060607 cell-cell adhesion involved in sealing an epithelial fold
+Motility and Invasion,GO:0007155 cell adhesion,GO:0044331 cell-cell adhesion mediated by cadherin
+Motility and Invasion,GO:0007155 cell adhesion,GO:0033631 cell-cell adhesion mediated by integrin
+Motility and Invasion,GO:0007155 cell adhesion,GO:0098632 cell-cell adhesion mediator activity
+Motility and Invasion,GO:0007155 cell adhesion,GO:0098742 cell-cell adhesion via plasma-membrane adhesion molecules
+Motility and Invasion,GO:0007155 cell adhesion,GO:0071603 endothelial cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0090137 epithelial cell-cell adhesion involved in epithelium migration
+Motility and Invasion,GO:0007155 cell adhesion,GO:0034115 negative regulation of heterotypic cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0160015 platelet rolling
+Motility and Invasion,GO:0007155 cell adhesion,GO:0034116 positive regulation of heterotypic cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0086080 protein binding involved in heterotypic cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0034114 regulation of heterotypic cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0034111 negative regulation of homotypic cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0034112 positive regulation of homotypic cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0034110 regulation of homotypic cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0007159 leukocyte cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0022408 negative regulation of cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0022409 positive regulation of cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0098635 protein complex involved in cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0090138 regulation of actin cytoskeleton organization by cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0022407 regulation of cell-cell adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0007160 cell-matrix adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0021833 cell-matrix adhesion involved in tangential migration using cell-cell interactions
+Motility and Invasion,GO:0007155 cell adhesion,GO:0010812 negative regulation of cell-substrate adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0010811 positive regulation of cell-substrate adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0010810 regulation of cell-substrate adhesion
+Motility and Invasion,GO:0007155 cell adhesion,GO:0034446 substrate adhesion-dependent cell spreading
+Motility and Invasion,GO:0007155 cell adhesion,"GO:0006931 substrate-dependent cell migration, cell attachment to substrate"
+Motility and Invasion,GO:0007155 cell adhesion,GO:0098636 protein complex involved in cell adhesion
+Motility and Invasion,GO:0030198 extracellular matrix organization,GO:0030199 collagen fibril organization
+Motility and Invasion,GO:0030198 extracellular matrix organization,GO:0048251 elastic fiber assembly
+Motility and Invasion,GO:0030198 extracellular matrix organization,GO:1901202 negative regulation of extracellular matrix assembly
+Motility and Invasion,GO:0030198 extracellular matrix organization,GO:1901203 positive regulation of extracellular matrix assembly
+Motility and Invasion,GO:0030198 extracellular matrix organization,GO:1901201 regulation of extracellular matrix assembly
+Motility and Invasion,GO:0001837 epithelial to mesenchymal transition,GO:0010719 negative regulation of epithelial to mesenchymal transition
+Motility and Invasion,GO:0001837 epithelial to mesenchymal transition,GO:0010718 positive regulation of epithelial to mesenchymal transition
+Motility and Invasion,GO:0001837 epithelial to mesenchymal transition,GO:0010717 regulation of epithelial to mesenchymal transition
+Motility and Invasion,GO:0060231 mesenchymal to epithelial transition,GO:0060231 mesenchymal to epithelial transition
+Motility and Invasion,GO:0030198 extracellular matrix organization,GO:1901148 gene expression involved in extracellular matrix organization
+Motility and Invasion,GO:0030198 extracellular matrix organization,GO:0120216 matrilin complex
+Motility and Invasion,GO:1905048 regulation of metallopeptidase activity,GO:1905048 regulation of metallopeptidase activity
+Intravasation,GO:0030198 extracellular matrix organization,GO:0070831 basement membrane assembly
+Intravasation,GO:0030198 extracellular matrix organization,GO:0110011 regulation of basement membrane organization
+Intravasation,GO:0030198 extracellular matrix organization,GO:0085029 extracellular matrix assembly
+Intravasation,GO:0030198 extracellular matrix organization,GO:0070278 extracellular matrix constituent secretion
+Intravasation,GO:0030198 extracellular matrix organization,GO:0034769 basement membrane disassembly
+Intravasation,GO:0030198 extracellular matrix organization,GO:0010716 negative regulation of extracellular matrix disassembly
+Intravasation,GO:0030198 extracellular matrix organization,GO:0090091 positive regulation of extracellular matrix disassembly
+Intravasation,GO:0030198 extracellular matrix organization,GO:0010715 regulation of extracellular matrix disassembly
+Intravasation,GO:0030198 extracellular matrix organization,GO:1903054 negative regulation of extracellular matrix organization
+Intravasation,GO:0030198 extracellular matrix organization,GO:1903055 positive regulation of extracellular matrix organization
+Intravasation,GO:0030198 extracellular matrix organization,GO:1903053 regulation of extracellular matrix organization
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:1901889 negative regulation of cell junction assembly
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:1901890 positive regulation of cell junction assembly
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:1901888 regulation of cell junction assembly
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:0150146 cell junction disassembly
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:0034332 adherens junction organization
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:0007043 cell-cell junction assembly
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:0150147 cell-cell junction disassembly
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:0045217 cell-cell junction maintenance
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:0002934 desmosome organization
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:0009663 plasmodesma organization
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:0120193 tight junction organization
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:0007044 cell-substrate junction assembly
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:0120180 cell-substrate junction disassembly
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:0150118 negative regulation of cell-substrate junction organization
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:0150117 positive regulation of cell-substrate junction organization
+"Cellular arrest, vascular adhesion, and extravasation",GO:0034330 cell junction organization,GO:0150116 regulation of cell-substrate junction organization
+"Cellular arrest, vascular adhesion, and extravasation",GO:0045123 cellular extravasation,GO:0050904 diapedesis
+"Cellular arrest, vascular adhesion, and extravasation",GO:0045123 cellular extravasation,GO:0072682 eosinophil extravasation
+"Cellular arrest, vascular adhesion, and extravasation",GO:0045123 cellular extravasation,GO:0050903 leukocyte activation-dependent arrest
+"Cellular arrest, vascular adhesion, and extravasation",GO:0045123 cellular extravasation,GO:0050902 leukocyte adhesive activation
+"Cellular arrest, vascular adhesion, and extravasation",GO:0045123 cellular extravasation,GO:0050901 leukocyte tethering or rolling
+"Cellular arrest, vascular adhesion, and extravasation",GO:0045123 cellular extravasation,GO:0035696 monocyte extravasation
+"Cellular arrest, vascular adhesion, and extravasation",GO:0045123 cellular extravasation,GO:0002692 negative regulation of cellular extravasation
+"Cellular arrest, vascular adhesion, and extravasation",GO:0045123 cellular extravasation,GO:0072672 neutrophil extravasation
+"Cellular arrest, vascular adhesion, and extravasation",GO:0045123 cellular extravasation,GO:0002693 positive regulation of cellular extravasation
+"Cellular arrest, vascular adhesion, and extravasation",GO:0045123 cellular extravasation,GO:0002691 regulation of cellular extravasation
+"Cellular arrest, vascular adhesion, and extravasation",GO:0045123 cellular extravasation,GO:0072683 T cell extravasation
