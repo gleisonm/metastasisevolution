@@ -5,7 +5,7 @@ library(httr)
 library(vroom)
 
 # Data frame with GOids and annotation
-metastasis_ids <- read.table("assets/Detatch_and_Dissemination_Deprecated.csv", sep = ",", header = T)                              
+metastasis_ids <- read.table("assets/Detatch_and_Dissemination.csv", sep = ",", header = T)                              
 metastasis_ids$Signature <- substr(metastasis_ids$Signature, 12,nchar(metastasis_ids$Signature))                            
 metastasis_ids <- separate(metastasis_ids, GO_id, into = c("GO_id", "Description"), sep = 10, extra = "merge")
 
