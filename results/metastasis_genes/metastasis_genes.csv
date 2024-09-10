@@ -1,0 +1,818 @@
+external_gene_name,Signature
+CXCL12,cellular extravasation
+CCL25,cellular extravasation
+THY1,cellular extravasation
+LYVE1,cellular extravasation
+FUT9,cellular extravasation
+CCL28,cellular extravasation
+ADAM8,cellular extravasation
+ICAM1,cellular extravasation
+PTGER4,cellular extravasation
+FUT7,cellular extravasation
+ST3GAL4,cellular extravasation
+AGER,cellular extravasation
+CCL21,cellular extravasation
+PLVAP,cellular extravasation
+JAM3,cellular extravasation
+PKP2,cell junction organization
+DSG2,cell junction organization
+PKP3,cell junction organization
+PRKCA,cell junction organization
+SNAI2,cell junction organization
+JUP,cell junction organization
+PECAM1,cell junction organization
+FBF1,cell junction organization
+CLDN5,cell junction organization
+RHOA,cell junction organization
+CLDN3,cell junction organization
+CTNNB1,cell junction organization
+SMAD7,cell junction organization
+FSCN1,cell junction organization
+OCLN,cell junction organization
+CLDN11,cell junction organization
+PAK2,cell junction organization
+GJB6,cell junction organization
+WDR1,cell junction organization
+ESAM,cell junction organization
+PKN2,cell junction organization
+MARVELD3,cell junction organization
+CLDN1,cell junction organization
+RAB13,cell junction organization
+CNTNAP1,cell junction organization
+ECT2,cell junction organization
+ACTB,cell junction organization
+DLG1,cell junction organization
+CDH5,cell junction organization
+GJD3,cell junction organization
+MARVELD2,cell junction organization
+AFDN,cell junction organization
+RHOC,cell junction organization
+GJB2,cell junction organization
+MPP7,cell junction organization
+RAMP2,cell junction organization
+GRHL2,cell junction organization
+POF1B,cell junction organization
+VCL,cell junction organization
+JAM3,cell junction organization
+FRMPD2,cell junction organization
+ACTG1,cell junction organization
+GJA5,cell junction organization
+LAMC1,cell junction organization
+ACTN2,cell junction organization
+ARHGEF7,cell junction organization
+ITGB4,cell junction organization
+PEAK1,cell junction organization
+THSD1,cell junction organization
+TAOK2,cell junction organization
+FERMT2,cell junction organization
+COL17A1,cell junction organization
+RCC2,cell junction organization
+BCR,cell junction organization
+PLEC,cell junction organization
+SRC,cell junction organization
+RHOD,cell junction organization
+WHAMM,cell junction organization
+PTPRK,cell junction organization
+PIP5K1A,cell junction organization
+ACTN1,cell junction organization
+ACTN3,cell junction organization
+CDH11,cell junction organization
+PECAM1,cell adhesion
+BMP7,cell adhesion
+NT5E,cell adhesion
+CLECL1P,cell adhesion
+SELPLG,cell adhesion
+RAC2,cell adhesion
+ADD2,cell adhesion
+MADCAM1,cell adhesion
+ROCK1,cell adhesion
+SELL,cell adhesion
+CD209,cell adhesion
+GOLPH3,cell adhesion
+ITGAL,cell adhesion
+F11R,cell adhesion
+UMOD,cell adhesion
+JAM2,cell adhesion
+ITGA4,cell adhesion
+CCL5,cell adhesion
+GCNT1,cell adhesion
+CALCA,cell adhesion
+SYK,cell adhesion
+APOA4,cell adhesion
+S100A9,cell adhesion
+PODXL2,cell adhesion
+ICAM1,cell adhesion
+IL1B,cell adhesion
+S100A8,cell adhesion
+ITGB2,cell adhesion
+EZR,cell adhesion
+ITGB1,cell adhesion
+TNF,cell adhesion
+VCAM1,cell adhesion
+CD177,cell adhesion
+FERMT3,cell adhesion
+SELP,cell adhesion
+CD44,cell adhesion
+LRG1,cell adhesion
+SELE,cell adhesion
+MSN,cell adhesion
+ITGB7,cell adhesion
+SEMA4D,cell adhesion
+TNIP1,cell adhesion
+ITGB5,cell adhesion
+ITGA8,cell adhesion
+HOXD3,cell adhesion
+CD63,cell adhesion
+ACTN2,cell adhesion
+ARHGEF7,cell adhesion
+ADAM9,cell adhesion
+EMP2,cell adhesion
+ITGB4,cell adhesion
+ITGA11,cell adhesion
+PEAK1,cell adhesion
+THSD1,cell adhesion
+TAOK2,cell adhesion
+ITGA10,cell adhesion
+ANGPTL3,cell adhesion
+ITGA2,cell adhesion
+FERMT2,cell adhesion
+EMILIN1,cell adhesion
+TIAM1,cell adhesion
+CD96,cell adhesion
+ITGB1BP1,cell adhesion
+HPSE,cell adhesion
+BCAM,cell adhesion
+ITGAV,cell adhesion
+VTN,cell adhesion
+ITGA6,cell adhesion
+FGA,cell adhesion
+FGG,cell adhesion
+RCC2,cell adhesion
+TMEM8B,cell adhesion
+ITGB3,cell adhesion
+L1CAM,cell adhesion
+BCR,cell adhesion
+ITGAM,cell adhesion
+COL3A1,cell adhesion
+SRC,cell adhesion
+FGB,cell adhesion
+COL13A1,cell adhesion
+CCL21,cell adhesion
+ITGB8,cell adhesion
+RHOD,cell adhesion
+WHAMM,cell adhesion
+PTPRK,cell adhesion
+PIP5K1A,cell adhesion
+TSC1,cell adhesion
+ITGA1,cell adhesion
+ACTN1,cell adhesion
+DDR1,cell adhesion
+ADAMTS12,cell adhesion
+ACTN3,cell adhesion
+CDH11,cell adhesion
+PDPN,extracellular matrix organization
+FSCN1,extracellular matrix organization
+DPP4,extracellular matrix organization
+CLASP2,extracellular matrix organization
+FAP,extracellular matrix organization
+MELTF,extracellular matrix organization
+CLASP1,extracellular matrix organization
+FGFR4,extracellular matrix organization
+CARMIL2,extracellular matrix organization
+CST3,extracellular matrix organization
+IL6,extracellular matrix organization
+DDR1,extracellular matrix organization
+TGFB1,epithelial to mesenchymal transition
+PHLDB1,epithelial to mesenchymal transition
+BCL9L,epithelial to mesenchymal transition
+PDPN,epithelial to mesenchymal transition
+TGFB2,epithelial to mesenchymal transition
+CTNNB1,epithelial to mesenchymal transition
+DAG1,epithelial to mesenchymal transition
+GREM1,epithelial to mesenchymal transition
+PHLDB2,epithelial to mesenchymal transition
+QKI,epithelial to mesenchymal transition
+LDLRAD4,epithelial to mesenchymal transition
+SMAD7,epithelial to mesenchymal transition
+KAT8,epithelial to mesenchymal transition
+RGCC,epithelial to mesenchymal transition
+GLIPR2,epithelial to mesenchymal transition
+WWTR1,epithelial to mesenchymal transition
+BAMBI,epithelial to mesenchymal transition
+SDHAF2,epithelial to mesenchymal transition
+USF3,epithelial to mesenchymal transition
+LEF1,epithelial to mesenchymal transition
+SFRP2,epithelial to mesenchymal transition
+AXIN2,epithelial to mesenchymal transition
+ADIPOR1,epithelial to mesenchymal transition
+TGFB3,epithelial to mesenchymal transition
+SNAI1,epithelial to mesenchymal transition
+SMAD3,epithelial to mesenchymal transition
+FERMT2,epithelial to mesenchymal transition
+CLASP2,epithelial to mesenchymal transition
+LOXL2,epithelial to mesenchymal transition
+DAB2,epithelial to mesenchymal transition
+EPHA4,epithelial to mesenchymal transition
+TIAM1,epithelial to mesenchymal transition
+FOXC1,epithelial to mesenchymal transition
+ZNF750,epithelial to mesenchymal transition
+TCF7L2,epithelial to mesenchymal transition
+FOXA2,epithelial to mesenchymal transition
+TGFBR2,epithelial to mesenchymal transition
+PTEN,epithelial to mesenchymal transition
+GATA3,epithelial to mesenchymal transition
+MCRIP1,epithelial to mesenchymal transition
+PPP2CA,epithelial to mesenchymal transition
+GCNT2,epithelial to mesenchymal transition
+NKX2-1,epithelial to mesenchymal transition
+FOXA1,epithelial to mesenchymal transition
+IL1B,epithelial to mesenchymal transition
+HPN,epithelial to mesenchymal transition
+CLASP1,epithelial to mesenchymal transition
+TGFB1I1,epithelial to mesenchymal transition
+MTOR,epithelial to mesenchymal transition
+VASN,epithelial to mesenchymal transition
+COL1A1,epithelial to mesenchymal transition
+BMP2,epithelial to mesenchymal transition
+SFRP1,epithelial to mesenchymal transition
+IL6,epithelial to mesenchymal transition
+DAB2IP,epithelial to mesenchymal transition
+MAD2L2,epithelial to mesenchymal transition
+LRG1,epithelial to mesenchymal transition
+ALX1,epithelial to mesenchymal transition
+TWIST1,epithelial to mesenchymal transition
+PTK2,epithelial to mesenchymal transition
+SDCBP,epithelial to mesenchymal transition
+EZH2,epithelial to mesenchymal transition
+SERPINB3,epithelial to mesenchymal transition
+KDM1A,epithelial to mesenchymal transition
+MARK1,epithelial to mesenchymal transition
+MDK,epithelial to mesenchymal transition
+PDGFB,cell adhesion
+AP1AR,cell adhesion
+SKAP1,cell adhesion
+DUSP3,cell adhesion
+PLEKHA2,cell adhesion
+GFUS,cell adhesion
+TESK1,cell adhesion
+OLFM4,cell adhesion
+PKP2,cell adhesion
+EPHA3,cell adhesion
+PTK2B,cell adhesion
+DOCK1,cell adhesion
+CCL25,cell adhesion
+THY1,cell adhesion
+PHLDB2,cell adhesion
+GPM6B,cell adhesion
+HRG,cell adhesion
+ADAM15,cell adhesion
+DLC1,cell adhesion
+CORO1C,cell adhesion
+FZD4,cell adhesion
+LIMCH1,cell adhesion
+CORO2B,cell adhesion
+MACF1,cell adhesion
+DOCK5,cell adhesion
+DUSP22,cell adhesion
+RAC3,cell adhesion
+CASS4,cell adhesion
+SLK,cell adhesion
+TRIOBP,cell adhesion
+AJAP1,cell adhesion
+CALR,cell adhesion
+PLAU,cell adhesion
+PLG,cell adhesion
+ILK,cell adhesion
+RRAS,cell adhesion
+FZD7,cell adhesion
+FAM107A,cell adhesion
+EFEMP2,cell adhesion
+RASA1,cell adhesion
+CLASP2,cell adhesion
+WASHC2C,cell adhesion
+THBS1,cell adhesion
+PTPRJ,cell adhesion
+CEACAM6,cell adhesion
+NRP1,cell adhesion
+CDC42,cell adhesion
+ATXN3,cell adhesion
+AGR2,cell adhesion
+PTEN,cell adhesion
+P4HB,cell adhesion
+ABL1,cell adhesion
+ACVRL1,cell adhesion
+CASK,cell adhesion
+TEK,cell adhesion
+JAG1,cell adhesion
+CCL28,cell adhesion
+GCNT2,cell adhesion
+MYADM,cell adhesion
+FBLN1,cell adhesion
+MINK1,cell adhesion
+CAMSAP3,cell adhesion
+MELTF,cell adhesion
+FN1,cell adhesion
+VEGFA,cell adhesion
+KANK1,cell adhesion
+HTN1,cell adhesion
+SERPINE1,cell adhesion
+CDKN2A,cell adhesion
+APOD,cell adhesion
+GSK3B,cell adhesion
+SPRY4,cell adhesion
+EFNA5,cell adhesion
+ACER2,cell adhesion
+PIK3CB,cell adhesion
+DAPK3,cell adhesion
+CLASP1,cell adhesion
+COL16A1,cell adhesion
+NOTCH1,cell adhesion
+C1QBP,cell adhesion
+PPM1F,cell adhesion
+ACTN4,cell adhesion
+ARHGAP6,cell adhesion
+S100A10,cell adhesion
+CARMIL1,cell adhesion
+MMP12,cell adhesion
+CRKL,cell adhesion
+CRK,cell adhesion
+NEDD9,cell adhesion
+KDR,cell adhesion
+GBP1,cell adhesion
+RREB1,cell adhesion
+ALOX15,cell adhesion
+HOXA7,cell adhesion
+PTK2,cell adhesion
+CIB1,cell adhesion
+WNT1,cell adhesion
+JUP,cell adhesion
+RIN2,cell adhesion
+LIMS1,cell adhesion
+VCL,cell adhesion
+SPOCK1,cell adhesion
+FLNA,cell adhesion
+RAC1,cell adhesion
+UTRN,cell adhesion
+ACTG1,cell adhesion
+RSU1,cell adhesion
+APOA1,cell adhesion
+JAK2,cell adhesion
+FUT1,cell adhesion
+CD36,cell adhesion
+MYOC,cell adhesion
+CDK6,cell adhesion
+CDH13,cell adhesion
+BST1,cell adhesion
+EPHA1,cell adhesion
+TGFB1,cell adhesion
+IGFBP2,cell adhesion
+SDC4,cell adhesion
+BCL6,cell adhesion
+LEP,cell adhesion
+TRPV4,cell adhesion
+RHOA,cell adhesion
+HLA-DPB1,cell adhesion
+HLA-A,cell adhesion
+ABCA12,cell adhesion
+MBP,cell adhesion
+HFE,cell adhesion
+RASAL3,cell adhesion
+IRAK1,cell adhesion
+PDPN,cell adhesion
+CXCL12,cell adhesion
+IL12A,cell adhesion
+CD24,cell adhesion
+RDX,cell adhesion
+NF2,cell adhesion
+FLOT2,cell adhesion
+BRD2,cell adhesion
+IL18,cell adhesion
+PPARA,cell adhesion
+HLA-DRA,cell adhesion
+MMRN1,cell adhesion
+SMAD7,cell adhesion
+NODAL,cell adhesion
+CD81,cell adhesion
+TMX1,cell adhesion
+HHLA2,cell adhesion
+HLA-G,cell adhesion
+ADTRP,cell adhesion
+VSIR,cell adhesion
+HLA-E,cell adhesion
+CD3E,cell adhesion
+ASS1,cell adhesion
+XBP1,cell adhesion
+RGCC,cell adhesion
+HSPD1,cell adhesion
+MEGF10,cell adhesion
+IL23A,cell adhesion
+WNK1,cell adhesion
+PYCARD,cell adhesion
+PTPN23,cell adhesion
+CD274,cell adhesion
+CAV1,cell adhesion
+ANXA1,cell adhesion
+IL4I1,cell adhesion
+TWSG1,cell adhesion
+MAGI1,cell adhesion
+B4GALNT2,cell adhesion
+MIA3,cell adhesion
+XCL1,cell adhesion
+DPP4,cell adhesion
+LILRB4,cell adhesion
+DUSP10,cell adhesion
+SLC7A1,cell adhesion
+FSTL3,cell adhesion
+MDGA1,cell adhesion
+TMIGD2,cell adhesion
+PRKCA,cell adhesion
+CD28,cell adhesion
+CD160,cell adhesion
+PNP,cell adhesion
+PTPN22,cell adhesion
+KLHL25,cell adhesion
+PRKAR1A,cell adhesion
+ZDHHC2,cell adhesion
+CD300A,cell adhesion
+DOCK8,cell adhesion
+RARA,cell adhesion
+TRAF6,cell adhesion
+RIPOR2,cell adhesion
+SOCS1,cell adhesion
+PLAUR,cell adhesion
+EPHB3,cell adhesion
+TMEM131L,cell adhesion
+TARM1,cell adhesion
+PTPRG,cell adhesion
+JAK1,cell adhesion
+IL6ST,cell adhesion
+CR1,cell adhesion
+TNFSF11,cell adhesion
+ZP4,cell adhesion
+CD6,cell adhesion
+LILRB1,cell adhesion
+FUT9,cell adhesion
+TGFBR2,cell adhesion
+FCHO1,cell adhesion
+PLPP3,cell adhesion
+IL2,cell adhesion
+HLA-DPA1,cell adhesion
+ADA,cell adhesion
+EP300,cell adhesion
+IL21,cell adhesion
+FLOT1,cell adhesion
+ADAM8,cell adhesion
+ZAP70,cell adhesion
+CX3CL1,cell adhesion
+TIGIT,cell adhesion
+ZC3H8,cell adhesion
+NKAP,cell adhesion
+SIRPG,cell adhesion
+VTCN1,cell adhesion
+HLA-DRB3,cell adhesion
+AFDN,cell adhesion
+NCKAP1L,cell adhesion
+IL1RN,cell adhesion
+FBXO38,cell adhesion
+IFNG,cell adhesion
+IFNB1,cell adhesion
+IFNA2,cell adhesion
+CELA2A,cell adhesion
+RELA,cell adhesion
+IL4,cell adhesion
+ARG1,cell adhesion
+IGF1,cell adhesion
+AMBRA1,cell adhesion
+TNFSF14,cell adhesion
+FOXO3,cell adhesion
+FUT4,cell adhesion
+CD46,cell adhesion
+BMP6,cell adhesion
+KLF4,cell adhesion
+SPINT2,cell adhesion
+SART1,cell adhesion
+CD9,cell adhesion
+CD55,cell adhesion
+TJP1,cell adhesion
+C1QTNF1,cell adhesion
+IGF2,cell adhesion
+FUT7,cell adhesion
+IL12RB1,cell adhesion
+CTSG,cell adhesion
+CD1D,cell adhesion
+GPNMB,cell adhesion
+ST3GAL4,cell adhesion
+AKT1,cell adhesion
+BMP4,cell adhesion
+BMP2,cell adhesion
+LILRB2,cell adhesion
+IL6,cell adhesion
+HMGB1,cell adhesion
+ETS1,cell adhesion
+MAPK7,cell adhesion
+RPS3,cell adhesion
+NCK2,cell adhesion
+FUT3,cell adhesion
+MAD2L2,cell adhesion
+ADAM19,cell adhesion
+ADAMTS18,cell adhesion
+NOTCH4,cell adhesion
+PTPRU,cell adhesion
+HAVCR2,cell adhesion
+DLG5,cell adhesion
+PDCD1,cell adhesion
+AGER,cell adhesion
+LAX1,cell adhesion
+TFRC,cell adhesion
+CD40LG,cell adhesion
+CD276,cell adhesion
+ILDR2,cell adhesion
+RHOH,cell adhesion
+PODXL,cell adhesion
+HLA-DRB1,cell adhesion
+CDSN,cell adhesion
+LCK,cell adhesion
+ADIPOQ,cell adhesion
+LOXL3,cell adhesion
+PRKG1,cell adhesion
+PIEZO1,cell adhesion
+FOXP3,cell adhesion
+GTPBP4,cell adhesion
+IFNL1,cell adhesion
+KAT5,cell adhesion
+GLMN,cell adhesion
+NCK1,cell adhesion
+TNFRSF14,cell adhesion
+UFL1,cell adhesion
+EMILIN2,cell adhesion
+CARD11,cell adhesion
+CD47,cell adhesion
+HLA-DMB,cell adhesion
+HAS2,cell adhesion
+PTPRR,cell adhesion
+EPCAM,cell adhesion
+CTLA4,cell adhesion
+NFAT5,cell adhesion
+DENND6A,cell adhesion
+NR4A3,cell adhesion
+PDCD1LG2,cell adhesion
+IL12B,cell adhesion
+CDH1,cell adhesion
+TYK2,cell adhesion
+AIF1,cell adhesion
+MDK,cell adhesion
+LGALS9,cell adhesion
+TGFB2,extracellular matrix organization
+GREM1,extracellular matrix organization
+COL5A1,extracellular matrix organization
+LOXL2,extracellular matrix organization
+COL11A2,extracellular matrix organization
+COL5A2,extracellular matrix organization
+COL3A1,extracellular matrix organization
+COL2A1,extracellular matrix organization
+COL1A1,extracellular matrix organization
+PXDN,extracellular matrix organization
+COL1A2,extracellular matrix organization
+ITGA5,cell adhesion
+ADAM17,cell adhesion
+ITGB6,cell adhesion
+CCN3,cell adhesion
+FYB2,cell adhesion
+FBN1,cell adhesion
+CAMSAP3,cell junction organization
+INAVA,cell junction organization
+TJP1,cell junction organization
+KIFC3,cell junction organization
+PLEKHA7,cell junction organization
+CDH1,cell junction organization
+LAMC1,cell adhesion
+PARVA,cell adhesion
+RADIL,cell adhesion
+LAMA5,cell adhesion
+SRGAP2,cell adhesion
+EFNA1,cell adhesion
+LAMB1,cell adhesion
+ANTXR1,cell adhesion
+SRCIN1,cell adhesion
+KIF14,cell adhesion
+CMA1,extracellular matrix organization
+CTSS,extracellular matrix organization
+HPN,extracellular matrix organization
+PECAM1,cellular extravasation
+JAML,cellular extravasation
+AZU1,cellular extravasation
+CTNND1,cell adhesion
+CDH5,cell adhesion
+CDHR2,cell adhesion
+F2R,cell junction organization
+PRTN3,cell junction organization
+KIRREL1,cell junction organization
+CSF1R,cell junction organization
+MYADM,cell junction organization
+F2RL1,cell junction organization
+CD177,cell junction organization
+EFEMP2,extracellular matrix organization
+FBLN5,extracellular matrix organization
+MFAP4,extracellular matrix organization
+MYH11,extracellular matrix organization
+TNXB,extracellular matrix organization
+SELPLG,cellular extravasation
+ADD2,cellular extravasation
+MADCAM1,cellular extravasation
+ROCK1,cellular extravasation
+SELL,cellular extravasation
+GOLPH3,cellular extravasation
+JAM2,cellular extravasation
+ITGA4,cellular extravasation
+GCNT1,cellular extravasation
+PODXL2,cellular extravasation
+ITGB1,cellular extravasation
+TNF,cellular extravasation
+VCAM1,cellular extravasation
+SELP,cellular extravasation
+SELE,cellular extravasation
+ITGB7,cellular extravasation
+THBS4,cell adhesion
+PRTN3,cellular extravasation
+CD177,cellular extravasation
+ITGAL,cellular extravasation
+F11R,cellular extravasation
+TGFB1,extracellular matrix organization
+GPM6B,extracellular matrix organization
+QSOX1,extracellular matrix organization
+S100A11,cell adhesion
+CNN3,cell adhesion
+PAK4,cell adhesion
+LRRC4C,cell adhesion
+PDLIM5,cell adhesion
+TRIM29,cell adhesion
+SLAMF1,cell adhesion
+RAB10,cell adhesion
+PLXNB3,cell adhesion
+BAIAP2,cell adhesion
+TMOD3,cell adhesion
+BAIAP2L1,cell adhesion
+STXBP6,cell adhesion
+PKP3,cell adhesion
+ESAM,cell adhesion
+NTNG1,cell adhesion
+SIRPA,cell adhesion
+ANXA2,cell adhesion
+PPP1CA,cell adhesion
+KRT18,cell adhesion
+NINJ1,cell adhesion
+JAM3,cell adhesion
+CLSTN3,cell adhesion
+CDC42EP1,cell adhesion
+PDLIM1,cell adhesion
+LGALS2,cell adhesion
+LGALS1,cell adhesion
+ITGAX,cell adhesion
+TNN,cell adhesion
+CD80,cell adhesion
+ITGA2B,cell adhesion
+ITGA9,cell adhesion
+ITGA3,cell adhesion
+SLITRK3,cell adhesion
+UNC5D,cell adhesion
+ROBO2,cell adhesion
+ALCAM,cell adhesion
+ADGRL3,cell adhesion
+JAML,cell adhesion
+MPZ,cell adhesion
+DSG2,cell adhesion
+SLITRK1,cell adhesion
+ATP2C1,cell adhesion
+FLRT3,cell adhesion
+PLXNB2,cell adhesion
+PTPRF,cell adhesion
+SLITRK2,cell adhesion
+ROBO1,cell adhesion
+CXADR,cell adhesion
+PTPRD,cell adhesion
+PTPRT,cell adhesion
+CEACAM5,cell adhesion
+PTPRS,cell adhesion
+PTPRM,cell adhesion
+IGSF11,cell adhesion
+CD164,cell adhesion
+FGFRL1,cell adhesion
+SLITRK5,cell adhesion
+NECTIN2,cell adhesion
+DSCAML1,cell adhesion
+CEACAM8,cell adhesion
+PHLDB1,extracellular matrix organization
+DAG1,extracellular matrix organization
+PHLDB2,extracellular matrix organization
+DUSP3,cell junction organization
+EPHA3,cell junction organization
+THY1,cell junction organization
+PHLDB2,cell junction organization
+GPM6B,cell junction organization
+HRG,cell junction organization
+DLC1,cell junction organization
+CORO1C,cell junction organization
+LIMCH1,cell junction organization
+MACF1,cell junction organization
+DUSP22,cell junction organization
+SLK,cell junction organization
+FAM107A,cell junction organization
+LAMTOR2,cell junction organization
+CLASP2,cell junction organization
+PTPRJ,cell junction organization
+NRP1,cell junction organization
+ITGB1BP1,cell junction organization
+PTEN,cell junction organization
+ABL1,cell junction organization
+ACVRL1,cell junction organization
+TEK,cell junction organization
+VEGFA,cell junction organization
+APOD,cell junction organization
+EFNA5,cell junction organization
+DAPK3,cell junction organization
+CLASP1,cell junction organization
+COL16A1,cell junction organization
+PPM1F,cell junction organization
+ARHGAP6,cell junction organization
+S100A10,cell junction organization
+KDR,cell junction organization
+PTK2,cell junction organization
+LIMS1,cell junction organization
+RAC1,cell junction organization
+TSC1,cell junction organization
+MYOC,cell junction organization
+SMAD4,extracellular matrix organization
+RGCC,extracellular matrix organization
+TGFBR3,extracellular matrix organization
+PPARG,extracellular matrix organization
+SMAD3,extracellular matrix organization
+AGT,extracellular matrix organization
+TGFBR1,extracellular matrix organization
+SLITRK3,cell junction organization
+RAPGEF1,cell junction organization
+LRRTM3,cell junction organization
+DOCK1,cell junction organization
+PRKCH,cell junction organization
+RAP1B,cell junction organization
+ROCK1,cell junction organization
+SLITRK1,cell junction organization
+PRKACA,cell junction organization
+SYNDIG1,cell junction organization
+SRGAP2B,cell junction organization
+IL1RAPL1,cell junction organization
+WNT3A,cell junction organization
+RAP2A,cell junction organization
+F11R,cell junction organization
+MDGA1,cell junction organization
+GDF2,cell junction organization
+SRGAP2C,cell junction organization
+SLITRK2,cell junction organization
+RHOG,cell junction organization
+SNCA,cell junction organization
+SNAI1,cell junction organization
+ROCK2,cell junction organization
+RAPGEF2,cell junction organization
+BDNF,cell junction organization
+NPHP1,cell junction organization
+CYFIP2,cell junction organization
+GHRL,cell junction organization
+CNTNAP2,cell junction organization
+IKBKB,cell junction organization
+IL1RAPL2,cell junction organization
+FLOT1,cell junction organization
+NLGN1,cell junction organization
+NLGN4X,cell junction organization
+CLDN19,cell junction organization
+IL1B,cell junction organization
+EPHA2,cell junction organization
+TNF,cell junction organization
+APP,cell junction organization
+EIF4G1,cell junction organization
+NPHP4,cell junction organization
+RAP1A,cell junction organization
+GRID2,cell junction organization
+AGT,cell junction organization
+WNT7A,cell junction organization
+SRPX2,cell junction organization
+ACE2,cell junction organization
+MYO1C,cell junction organization
+CHADL,extracellular matrix organization
+ZNF469,extracellular matrix organization
+ADTRP,extracellular matrix organization
+PRDM5,extracellular matrix organization
+IER3IP1,extracellular matrix organization
+SLC2A10,extracellular matrix organization
+RECK,extracellular matrix organization
+COLGALT1,extracellular matrix organization
+ANGPTL7,extracellular matrix organization
+RIC1,extracellular matrix organization
+AEBP1,extracellular matrix organization
+CLDN3,regulation of metallopeptidase activity
+MBP,regulation of metallopeptidase activity
+DDRGK1,regulation of metallopeptidase activity
+RECK,regulation of metallopeptidase activity
+STAT3,regulation of metallopeptidase activity
+CLDN4,regulation of metallopeptidase activity
+SVBP,regulation of metallopeptidase activity
+TIMP1,regulation of metallopeptidase activity
+TIMP2,regulation of metallopeptidase activity
