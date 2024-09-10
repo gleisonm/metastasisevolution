@@ -66,7 +66,7 @@ get_string_ids <- function(genes_hgnc, species_id = "9606") {
 }
 
  # Get STRING interactions
- get_network_interaction <- function(map_ids, species_id = "9606") {
+ get_network_interaction <- function(map_ids, stringId, species_id = "9606") {
  
    identifiers <- map_ids %>% pull(stringId) %>% na.omit %>% paste0(collapse="%0d") 
  
@@ -266,4 +266,57 @@ merged_paths <- merge(nodelist, groot_df, by.x = "node", by.y = "string_id")
 
 merged_paths |> 
   vroom::vroom_write(file = here("results/orthology_data/merged_paths.csv"), delim = ",")
+```
+
+## Network
+
+```{r network}
+net <- get_network_interaction(merged_paths, "node")
+net <- combine_scores(net, evidences = c("ascore", "escore", "dscore"), confLevel = 0.4)
+
+net <-  net %>%
+  separate(stringId_A,
+           into = c("ncbi_taxon_id", "stringId_A"),
+           sep = "\\.") %>%
+  separate(stringId_B,
+           into = c("ncbi_taxon_id", "stringId_B"),
+           sep = "\\.") 
+
+network_filtered <- net %>%
+  dplyr::select(stringId_A, stringId_B) |>
+  distinct()
+
+pivotada <- df %>% 
+  dplyr::select(external_gene_name, Signature) %>% 
+  dplyr::mutate(n = 1) %>% 
+  tidyr::pivot_wider(
+    id_cols = external_gene_name,
+    names_from = Signature,
+    values_from = n,
+    values_fn = list(n = length),
+    values_fill = list(n = 0),
+  )
+
+source_statements <-
+  colnames(pivotada)[2:length(pivotada)]
+
+nodelist <-
+  data.frame(node = unique(c(network_filtered$stringId_A, network_filtered$stringId_B))) %>%
+  left_join(merged_paths, by = c("node" = "node")) %>%
+  left_join(map_ids, by = c("node" = "stringId")) %>%
+  left_join(pivotada, by = c("queryItem" = "external_gene_name"))
+
+# Network Metrics
+connected_nodes <- rle(sort(c(network_filtered[,1], network_filtered[,2])))
+connected_nodes <- data.frame(count=connected_nodes$lengths, node=connected_nodes$values)
+connected_nodes <- left_join(nodelist, connected_nodes, by = c("node" = "node"))
+
+nodelist |> 
+  vroom::vroom_write(file = here("results/orthology_data/nodelist.csv "), delim = ",")
+
+connected_nodes |> 
+  vroom::vroom_write(file = here("results/orthology_data/connected_nodes.csv"), delim = ",")
+
+network_filtered |> 
+  vroom::vroom_write(file = here("results/orthology_data/network_filtered.csv"), delim = ",")
 ```
