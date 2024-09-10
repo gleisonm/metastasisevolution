@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 ## Import libraries
 
 ```{r libs}
-library(GeneBridge)
+
 library(readr)
 library(dplyr)
 library(purrr)
@@ -29,7 +29,6 @@ library(ape)
 library(tidyverse)
 library(data.table)
 library(stringi)
-library(geneplast.data)
 library(AnnotationHub)
 library(sourcetools)
 library(here)
