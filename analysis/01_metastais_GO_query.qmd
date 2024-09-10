@@ -23,13 +23,14 @@ library(dplyr)
 library(httr)
 library(vroom)
 library(here)
+library(UpSetR)
 ```
 
 ## Define Functions
 
 ```{r funcs}
 # Function to search genes by GOids filtering by exoerimental evidences
-buscar_genes_por_GO <- function(GO_id) {
+query_GO <- function(GO_id) {
   url <- paste0("https://golr-aux.geneontology.io/solr/select?defType=edismax&qt=standard&indent=on&wt=csv&rows=100000&start=0&fl=bioentity_label&facet=true&facet.mincount=1&facet.sort=count&json.nl=arrarr&facet.limit=25&hl=true&hl.simple.pre=%3Cem%20class%3D%22hilite%22%3E&hl.snippets=1000&csv.encapsulator=&csv.separator=%09&csv.header=false&csv.mv.separator=%7C&fq=document_category:%22annotation%22&fq=isa_partof_closure:%22", GO_id,"%22&fq=taxon_subset_closure_label:%22Homo%20sapiens%22&fq=type:%22protein%22&fq=evidence_subset_closure_label:%22experimental%20evidence%22&facet.field=aspect&facet.field=taxon_subset_closure_label&facet.field=type&facet.field=evidence_subset_closure_label&facet.field=regulates_closure_label&facet.field=isa_partof_closure_label&facet.field=annotation_class_label&facet.field=qualifier&facet.field=annotation_extension_class_closure_label&facet.field=assigned_by&facet.field=panther_family_label&q=*%3A*")
   response <- tryCatch({
     vroom(url, delim = "\t", col_names = FALSE)
@@ -45,13 +46,30 @@ buscar_genes_por_GO <- function(GO_id) {
   return(unique(as.vector(genes)))
 }
 
-# Create a list with GOids and their respective genes
-obter_genes_por_GO_ids <- function(go_ids) {
+# Create a list with GOids and their respective genes 
+get_genes_by_GOid <- function(go_ids) {
   genes_per_term <- list()
   for (go_id in go_ids) {
-    genes_per_term[[go_id]] <- buscar_genes_por_GO(go_id)
+    genes_per_term[[go_id]] <- query_GO(go_id)
   }
   return(genes_per_term)
+}
+
+# Create gene data frame from list
+list_to_df <- function(genesPerTerm, metastasis_ids) {
+  result <- data.frame(external_gene_name = character(), Signature = character(), stringsAsFactors = FALSE)
+  
+  for (go_id in names(genesPerTerm)) {
+    genes <- genesPerTerm[[go_id]]
+    signature <- metastasis_ids$Signature[metastasis_ids$GO_id == go_id]
+    
+    if (length(signature) > 0 && length(genes) > 0) {
+      temp <- data.frame(external_gene_name = genes, Signature = rep(signature, length(genes)), stringsAsFactors = FALSE)
+      result <- rbind(result, temp)
+    }
+  }
+  
+  return(result)
 }
 ```
 
@@ -61,7 +79,7 @@ First, we need to load the metastasis GO biological process table
 
 ```{r data}
 # Data frame with GOids and annotation
-metastasis_ids <- read.table("assets/Detatch_and_Dissemination.csv", sep = ",", header = T)
+metastasis_ids <- vroom::vroom("../assets/Detatch_and_Dissemination.csv")
 metastasis_ids$Signature <- substr(metastasis_ids$Signature, 12, nchar(metastasis_ids$Signature))
 metastasis_ids <- separate(metastasis_ids, GO_id, into = c("GO_id", "Description"), sep = 10, extra = "merge")
 
@@ -74,24 +92,34 @@ Now we will query our sets of GOids to Gene Ontology db and classify them accord
 
 ```{r run}
 # Get genes per GOid
-genesPerTerm <- obter_genes_por_GO_ids(metastasis_ids$GO_id)
+genesPerTerm <- get_genes_by_GOid(metastasis_ids$GO_id)
 
 # Create gene data frame
 result <- data.frame(external_gene_name = character(), Signature = character(), stringsAsFactors = FALSE)
 
-for (go_id in names(genesPerTerm)) {
-  genes <- genesPerTerm[[go_id]]
-  signature <- metastasis_ids$Signature[metastasis_ids$GO_id == go_id]
-  if (length(signature) > 0 && length(genes) > 0) {
-    temp <- data.frame(external_gene_name = genes, Signature = rep(signature, length(genes)), stringsAsFactors = FALSE)
-    result <- rbind(result, temp)
-  }
-}
-
-result <- unique(result)
+result <- list_to_df(genesPerTerm, metastasis_ids) %>%
+  unique()
 
 result |> 
   vroom::vroom_write(file = here("results/metastasis_genes/metastasis_genes.csv"), delim = ",")
 
 head(result)
+```
+
+## Intersection of gene sets across each biological process.
+
+```{r plot}
+#Upset Plot
+pivotada <- result %>% 
+  dplyr::select(external_gene_name, Signature) %>% 
+  dplyr::mutate(n = 1) %>% 
+  tidyr::pivot_wider(
+    id_cols = external_gene_name,
+    names_from = Signature,
+    values_from = n,
+    values_fn = list(n = length),
+    values_fill = list(n = 0),
+  )
+
+UpSetR::upset(as.data.frame(pivotada), nsets = 50, nintersects = NA)
 ```
