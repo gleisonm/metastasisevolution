@@ -244,7 +244,7 @@ res |>
 ```
 ## GeneBridge results processing
 
-```{r data}
+```{r run}
 ## Naming the rooted clades and getting the final results table
 CLADE_NAMES <- "https://raw.githubusercontent.com/dalmolingroup/neurotransmissionevolution/ctenophora_before_porifera/analysis/geneplast_clade_names.tsv"
 
@@ -258,4 +258,12 @@ groot_df <- res %>%
 
 groot_df |> 
   vroom::vroom_write(file = here("results/orthology_data/groot_df.csv"), delim = ",")
+
+## Create
+nodelist <- data.frame(node = unique(c(string_edgelist$stringId_A, string_edgelist$stringId_B)))
+
+merged_paths <- merge(nodelist, groot_df, by.x = "node", by.y = "string_id")
+
+merged_paths |> 
+  vroom::vroom_write(file = here("results/orthology_data/merged_paths.csv"), delim = ",")
 ```
