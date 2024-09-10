@@ -31,6 +31,7 @@ library(stringi)
 library(geneplast.data)
 library(AnnotationHub)
 library(sourcetools)
+library(here)
 ```
 
 ## Define Functions
@@ -186,7 +187,7 @@ gene_cogs %<>%
 
 # Exporting for package use
 gene_cogs |> 
-  vroom::vroom_write(file = here("../results/orthology_data/gene_cogs.csv"), delim = ",")
+  vroom::vroom_write(file = here("results/orthology_data/gene_cogs.csv"), delim = ",")
 ```
 
 ## Get interaction network from STRINGdb
@@ -213,5 +214,6 @@ setdiff(
 ) 
 
 # Exporting for package use
-save(string_edgelist, file = 'results/string_edgelist')
+string_edgelist |> 
+  vroom::vroom_write(file = here("results/orthology_data/string_edgelist.csv"), delim = ",")
 ```
