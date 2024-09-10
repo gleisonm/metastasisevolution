@@ -1,5 +1,5 @@
 ---
-title: "01_BP_metastasis_db"
+title: "Create Biological Process and genes DB"
 author: "Gleison M. Azevedo"
 format: html
 execute: 
@@ -57,7 +57,7 @@ obter_genes_por_GO_ids <- function(go_ids) {
 
 ## Read Data
 
-First, we need to load the metastasis GO biological pathways table
+First, we need to load the metastasis GO biological process table
 
 ```{r data}
 # Data frame with GOids and annotation
