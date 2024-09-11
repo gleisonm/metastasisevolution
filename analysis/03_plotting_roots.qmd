@@ -1,0 +1,253 @@
+---
+title: "Plotting Results"
+author: "Gleison M. Azevedo"
+format: html
+editor: visual
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  results = FALSE
+)
+```
+
+## Import libraries
+
+```{r libs}
+library(ggplot2)
+library(ggraph)
+library(dplyr)
+library(tidyr)
+library(igraph)
+library(purrr)
+library(vroom)
+library(paletteer)
+library(easylayout)
+library(UpSetR)
+library(tinter)
+```
+
+## Define Functions
+
+```{r funcs}
+# Set colors
+color_mappings <- c("#06141FFF", "#742C14FF", "#3D4F7DFF", 
+                    "#E48C2AFF", "#72874EFF", "#046E8FFF")
+
+subset_graph_by_root <-
+  function(geneplast_result, root_number, graph) {
+    filtered <- geneplast_result %>%
+      filter(root >= root_number) %>%
+      pull(node)
+    
+    induced_subgraph(graph, which(V(graph)$name %in% filtered))
+  }
+
+adjust_color_by_root <- function(geneplast_result, root_number, graph) {
+  filtered <- geneplast_result %>%
+    filter(root == root_number) %>%
+    pull(node)
+  
+  V(graph)$color <- ifelse(V(graph)$name %in% filtered, "black", "gray")
+  return(graph)
+}
+
+# Configure graph collors by genes incrementation
+subset_and_adjust_color_by_root <- function(geneplast_result, root_number, graph) {
+  subgraph <- subset_graph_by_root(geneplast_result, root_number, graph)
+  adjusted_graph <- adjust_color_by_root(geneplast_result, root_number, subgraph)
+  return(adjusted_graph)
+}
+
+plot_network <- function(graph, title, nodelist, xlims, ylims, legend = "none") {
+  
+  # Generate color map
+  source_statements <-
+    colnames(nodelist)[11:length(nodelist)]
+  
+  color_mappings <- c("#06141FFF", "#742C14FF", "#3D4F7DFF", "#E48C2AFF", "#72874EFF", "#046E8FFF")
+  
+  names(color_mappings) <- source_statements
+  
+  vertices <- igraph::as_data_frame(graph, "vertices")
+  
+  ggraph:: ggraph(graph,
+                  "manual",
+                  x = V(graph)$x,
+                  y = V(graph)$y) +
+    ggraph::geom_edge_link0(edge_width = 0.2, color = "#90909020") +
+    ggraph::geom_node_point(ggplot2::aes(color = I(V(graph)$color)), size = 0.5) +
+    scatterpie::geom_scatterpie(
+      aes(x=x, y=y, r=18),
+      cols = source_statements,
+      data = vertices[rownames(vertices) %in% V(graph)$name[V(graph)$color == "black"],],
+      colour = NA,
+      pie_scale = 1
+    ) +
+    geom_node_text(aes(label = V(graph)$queryItem), nudge_x = 0.8, nudge_y = 0.8, size = 0.5, colour = "red") +
+    ggplot2::scale_fill_manual(values = color_mappings, drop = FALSE) +
+    ggplot2::coord_fixed() +
+    ggplot2::scale_x_continuous(limits = xlims) +
+    ggplot2::scale_y_continuous(limits = ylims) +
+    ggplot2::theme_void() +
+    ggplot2::theme(
+      legend.position = legend,
+      legend.key.size = ggplot2::unit(0.5, 'cm'),
+      legend.key.height = ggplot2::unit(0.5, 'cm'),
+      legend.key.width = ggplot2::unit(0.5, 'cm'),
+      legend.title = ggplot2::element_text(size=6),
+      legend.text = ggplot2::element_text(size=6),
+      panel.border = ggplot2::element_rect(
+        colour = "#161616",
+        fill = NA,
+        linewidth = 1
+      ),
+      plot.title = ggplot2::element_text(size = 8, face = "bold")
+    ) +
+    ggplot2::guides(
+      color = "none",
+      fill = "none"
+    ) +
+    ggplot2::labs(fill = "Source:", title = title)
+}
+```
+
+## Load Data
+
+```{r data}
+merged_paths <- vroom::vroom("../results/orthology_data/merged_paths.csv")
+df <- vroom::vroom("../results/metastasis_genes/metastasis_genes.csv")
+nodelist <- vroom::vroom("../results/orthology_data/nodelist.csv ")
+network_filtered <- vroom::vroom("../results/orthology_data/network_filtered.csv")
+source_statements <- colnames(nodelist)[10:length(nodelist)]
+```
+
+## Plotting Intersections
+
+```{r plots}
+upset(dplyr::select(as.data.frame(nodelist), 
+                    "queryItem", 
+                    "cell adhesion",                          
+                    "extracellular matrix organization",      
+                    "epithelial to mesenchymal transition",   
+                    "regulation of metallopeptidase activity",
+                    "cell junction organization",             
+                    "cellular extravasation"),
+                    nsets = 50, nintersects = NA,
+      sets.bar.color = color_mappings, 
+      mainbar.y.label = "Intersecção dos \nProcessos Biológicos",
+      sets.x.label = "Tamanho do set")
+```
+
+## Graph Build
+
+```{r graph}
+graph <-
+  graph_from_data_frame(network_filtered, directed = FALSE, vertices = nodelist)
+
+layout <- easylayout::vivagraph(graph)
+layout <- easylayout::vivagraph(graph, layout = layout, pin_nodes = TRUE, lcc_margin_left = 10)
+V(graph)$x <- layout[, 1]
+V(graph)$y <- layout[, 2]
+
+#save(graph, file = "results/plots/graph")
+```
+
+## Plotting Network By Root
+
+```{r plots}
+load("../results/plots/graph")
+
+ggraph(graph, "manual", x = V(graph)$x, y = V(graph)$y) +
+  geom_edge_link0(color = "#90909020") +
+  geom_node_point(aes(color = -root), size = 1.5) +
+  coord_fixed() +
+  theme_void() +
+  theme(legend.position = "bottom")
+```
+## Plotting Human PPI Network
+
+```{r plots}
+#ppi_labaled <-
+ggraph::ggraph(graph,
+               "manual",
+               x = V(graph)$x,
+               y = V(graph)$y) +
+  ggraph:: geom_edge_link0(edge_width = 0.5, color = "#90909020") +
+  scatterpie::geom_scatterpie(
+    cols = source_statements,
+    data = igraph::as_data_frame(graph, "vertices"),
+    colour = NA,
+    pie_scale = 0.40
+  ) +
+  geom_node_text(aes(label = nodelist$queryItem, colour = "red"), nudge_x = 0.8, nudge_y = 0.8, size = 2) +
+  ggplot2::scale_fill_manual(values = color_mappings, drop = FALSE)
+
+#ppi <- 
+  ggraph::ggraph(graph,
+               "manual",
+               x = V(graph)$x,
+               y = V(graph)$y) +
+  ggraph:: geom_edge_link0(edge_width = 0.5, color = "#90909020") +
+  scatterpie::geom_scatterpie(
+    cols = source_statements,
+    data = igraph::as_data_frame(graph, "vertices"),
+    colour = NA,
+    pie_scale = 0.40
+  ) +
+  ggplot2::scale_fill_manual(values = color_mappings, drop = FALSE)
+
+ggsave(file="../results/plots/human_ppi.svg", plot=ppi, width=10, height=8)
+ggsave(file="../results/plots/human_ppi_labaled.svg", plot=ppi, width=10, height=8)
+```
+
+```{r plots}
+geneplast_roots <- merged_paths |>
+  arrange(root)
+
+buffer <- c(-50, 50)
+xlims <- ceiling(range(V(graph)$x)) + buffer
+ylims <- ceiling(range(V(graph)$y)) + buffer
+
+roots <- unique(geneplast_roots$root) %>%
+  set_names(unique(geneplast_roots$clade_name))
+
+# Subset graphs by LCAs
+subsets <-
+  map(roots, ~ subset_and_adjust_color_by_root(geneplast_roots, .x, graph))
+
+# Plot titles
+titles <- names(roots)
+
+plots <-
+  map2(
+    subsets,
+    titles,
+    plot_network,
+    nodelist = nodelist,
+    xlims = xlims,
+    ylims = ylims,
+    legend = "right"
+  ) %>%
+  discard(is.null)
+
+design <- 
+  '01234
+   56789
+   ABCDE
+   FGHIJ
+   KLMNO'
+
+patchwork::wrap_plots(
+  rev(plots),
+  design = design,
+  nrow = 6,
+  ncol = 6
+)
+
+#ggsave("results/networks_all_roots.pdf")
+#ggsave("results/networks_all_roots.png")
+```
